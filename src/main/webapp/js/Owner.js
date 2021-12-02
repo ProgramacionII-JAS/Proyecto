@@ -270,7 +270,7 @@ document.getElementById("edit-button").onclick = function (){
                             "address": data.address,
                             "neighborhood": localidad
                         };
-                        fetch("http://localhost:8080/Taller5-1.0-SNAPSHOT/api/owners/owner/password",{
+                        fetch("http://localhost:8080/Taller5-1.0-SNAPSHOT/api/owners/owner/neighborhood",{
                             method:"PUT",
                             body: JSON.stringify(ownerJSON), // enviar el JSON para la API
                             headers:{
