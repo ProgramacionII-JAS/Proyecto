@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Propietario</title>
+</head>
+<body>
+
+
+    <section class="form-register" id="section">
+        <h1>Ciudadanos de 4 Patas</h1>
+        <h3>Propietario</h3>
+        <form class="needs-validation" id="formulario" action="img-servlet" method="post" enctype="multipart/form-data">
+
+            <label for="petId-Owner">Id mascota:</label>
+            <input class="controls" type="number" name="petId-Owner" id="petId-Owner" placeholder="Ingrese el Id" required/>
+            <br>
+            <label for="microchipPet-Owner">Microchip:</label>
+            <input class="controls" type="number" name="microchipPet-Owner" id="microchipPet-Owner" placeholder="Ingrese el Microchip"/>
+            <br>
+            <label for="petName-Owner">Nombre de la mascota:</label>
+            <input class="controls" type="text" name="petName-Owner" id="petName-Owner" placeholder="Ingrese el nombre de la mascota" required/>
+            <br>
+            <label for="imgMascota-Owner">Imagen de la mascota:</label>
+            <input class="controls" type="file" name="imgMascota-Owner" id="imgMascota-Owner" required/>
+            <br>
+            <label for="racePet-Owner">Raza:</label>
+            <input type="text" class="controls" id="racePet-Owner" placeholder="Ingrese la raza de la mascota" name="racePet-Owner" required/>
+            <br>
+            <label for="especie1Pet-Owner">Especie:</label>
+            <select id="especie1Pet-Owner" class="controls" required>
+                <option></option>
+                <option>Perro</option>
+                <option>Gato</option>
+            </select>
+
+            <label for="sexPet-Owner">Sexo:</label>
+            <select id="sexPet-Owner" class="controls" required>
+                <option></option>
+                <option>Macho</option>
+                <option>Hembra</option>
+            </select>
+
+            <label for="tamañoPet-Owner">Tamaño:</label>
+            <select id="tamañoPet-Owner" class="controls" required>
+                <option></option>
+                <option>Miniatura</option>
+                <option>Pequeño</option>
+                <option>Mediano</option>
+                <option>Grande</option>
+            </select>
+            <br>
+            <br>
+            <label for="ownerId-Owner">Id del Propietario:</label>
+            <input class="controls" type="text" name="ownerId-Owner" id="ownerId-Owner" placeholder="Ingrese el id del propietario" required/>
+            <input id="petsave-button" type="submit"  class="boton" value="Registrar"/>
+            <br>
+            <p style="color: tomato;" id="MensajeError"></p>
+        </form>
+
+        <form>
+            <input id="show-button"  type="button"  class="botons" value="Ver Mi(s) Mascota(s)"/>
+            <br>
+            <input id="message-button"  type="button"  class="botons" value="Chat"/>
+            <input id="back-button"  type="button"  class="botons" value="Cerrar Sesion"/>
+            <button id="edit-button"  type="button"  class="botons" data-toggle="modal" data-target="#myModal">Modificar Dirección o Vecindario</button>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <section class="form-edit">
+                                <h4>Ciudadanos de 4 patas</h4>
+                                <form class="needs-validation" novalidate>
+                                    <label >Dirección:</label>
+                                    <input class="controls" type="text" name="addressVet" id="newaddressOwner"
+                                           placeholder="Ingrese la dirección" required/>
+                                    <br>
+                                    <label >Localidad:</label>
+                                    <select id="newlocalidadOwner" class="controls" required>
+                                        <option value=""></option>
+                                        <option value="A. Nariño">A. NARINO</option>
+                                        <option value="B. UNIDOS">B. UNIDOS</option>
+                                        <option value="BOSA">BOSA</option>
+                                        <option value="C. BOLIVAR">C. BOLIVAR</option>
+                                        <option value="CHAPINERO">CHAPINERO</option>
+                                        <option value="ENGATIVA">ENGATIVA</option>
+                                        <option value="FONTIBON">FONTIBON</option>
+                                        <option value="KENNEDY">KENNEDY</option>
+                                        <option value="LA CANDELARIA">LA CANDELARIA</option>
+                                        <option value="LOS MARTIRES">LOS MARTIRES</option>
+                                        <option value="P. ARANDA">P. ARANDA</option>
+                                        <option value="R. CRISTOBAL">R. URIBE</option>
+                                        <option value="SAN CRISTOBAL">SAN CRISTOBAL</option>
+                                        <option value="SANTA FE">SANTA FE</option>
+                                        <option value="SUBA">SUBA</option>
+                                        <option value="SUMAPAZ">SUMAPAZ</option>
+                                        <option value="TEUSAQUILLO">TEUSAQUILLO</option>
+                                        <option value="TUNJUELITO">TUNJUELITO</option>
+                                        <option value="USAQUEN">USAQUEN</option>
+                                        <option value="USME">USME</option>
+                                    </select>
+                                    <br><br>
+                                    <input id="actualizarOwner"  type="button"  class="botons" value="Actualizar"/>
+                                </form>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <table border="1px" class="controls">
+            <thead>
+                <th>Microchip</th>
+                <th>Nombre</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Tamaño</th>
+                <th>Sexo</th>
+                <th>Imagen</th>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+            <button id="editImg-button"  type="button"  class="botons" data-toggle="modal" data-target="#imgModal">Modificar Foto de Su Mascota</button>
+
+            <div class="modal fade" id="imgModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Actualizar Imagen de Su Mascota</h4>
+                        </div>
+                        <div class="modal-body">
+                            <section class="form-edit">
+                                <h4>Ciudadanos de 4 patas</h4>
+                                <form class="needs-validation" id="formImg" action="img-servlet" method="post" enctype="multipart/form-data">
+                                    <label >Nueva Imagen:</label>
+                                    <input class="controls" type="file" name="addressVet" id="newImgPet"/>
+                                    <br>
+                                    <label >Id de la Mascota:</label>
+                                    <input class="controls" placeholder="Ingrese el Id de la Mascota" type="number" name="addressVet" id="idPet"/>
+                                    <br><br>
+                                    <input type="button" id="guardarImagen" class="botons" value="Guardar">
+                                    <input id="actualizarImgPet" type="submit"  class="botons" value="Actualizar" disabled/>
+                                    <p id="Mensajes"></p>
+                                </form>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <button id="editemail_password-button"  type="button"  class="botons" data-toggle="modal" data-target="#email_password">Modificar su Email y Contraseña</button>
+
+        <div class="modal fade" id="email_password" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Actualizar Imagen de Su Mascota</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section class="form-edit">
+                            <h4>Ciudadanos de 4 patas</h4>
+                            <form class="needs-validation" id="formEdit_Password">
+                                <label for="newEmail">Nuevo Email:</label>
+                                <input class="controls" type="text" placeholder="Ingrese nuevo Email" name="addressVet" id="newEmail"/>
+                                <br>
+                                <label for="newPassword">Nueva Contraseña:</label>
+                                <input class="controls" placeholder="Ingrese la nueva contraseña" type="password" name="addressVet" id="newPassword"/>
+                                <br><br>
+                                <input type="button" id="editEmailPassWord" class="botons" value="Guardar">
+                                <p id="MensajesEmail_Password"></p>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-register">
+        <h2>Crear Caso de la Mascota</h2>
+        <form>
+            <label for="caseId">Id del Caso Actual de Su Mascota</label>
+            <input id="caseId" type="text" class="controls" placeholder="Id del Caso">
+            <label for="fechaCracionCaso">Fecha de creacion del caso Caso</label>
+            <input id="fechaCracionCaso" type="date" class="controls" placeholder="fecha del caso">
+            <label for="tipoDeCaso">Seleccione el Tipo de Caso de Su Mascota</label>
+            <select id="tipoDeCaso" class="controls">
+                <option value=""></option>
+                <option value="perdida">Perdida</option>
+                <option value="robo">Robo</option>
+                <option value="fallecimiento">Falleciemiento</option>
+            </select>
+            <label for="descripcionCaso">Descripcion del Caso de su Mascota</label>
+            <input id="descripcionCaso" class="controls" type="text" placeholder="Descripcion del Caso">
+            <label for="idMascotaCaso">Id de la Mascota</label>
+            <input id="idMascotaCaso" class="controls" type="text" placeholder="Id de la Mascota">
+            <input type="button" class="botons" value="Guardar Caso" id="savePetCase">
+            <p style="color: tomato;" id="MensajeErrorCase"></p>
+        </form>
+    </section>
+
+    <section class="form-register">
+        <h2>Historia Clinica de la Mascota</h2>
+        <form>
+            <label for="namePet">Ingrese el Nombre de su Mascota</label>
+            <input type="text" class="controls" id="namePet" placeholder="Ingrese nombre de Su Mascota">
+            <input type="button" class="botons" id="verHistoriaC" value="Ver Historia Clinica Mascota">
+        </form>
+
+        <table border="1px" class="controls">
+            <thead>
+            <th>Id Visita</th>
+            <th>Fecha de la Visita</th>
+            <th>Tipo de Visita</th>
+            <th>Descripcion</th>
+            <th>Id Mascota</th>
+            <th>Nombre Veterinaria</th>
+            </thead>
+            <tbody id="tableVisits">
+            </tbody>
+        </table>
+
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/Owner.js"></script>
+</body>
+</html>

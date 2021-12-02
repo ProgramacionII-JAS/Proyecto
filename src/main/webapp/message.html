@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Chat</title>
+  <link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+<section class="form-register">
+  <table>
+    <tr>
+      <td colspan="2">
+        <input type="text" class="controls" id="usernamee" placeholder="Username"/>
+        <button type="button" class="botons" onclick="connect();" >Connect</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <textarea class="controls" readonly="true" rows="10" cols="100" id="log"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" class="controls" size="51" id="msgg" placeholder="Message"/>
+        <button type="button" class="botons" onclick="send();" >Send</button><br>
+        <textarea class="controls" readonly="true" rows="5" cols="100" id="peopleConnect"></textarea>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<script src="./js/websockets.js"></script>
+</body>
+</html>
