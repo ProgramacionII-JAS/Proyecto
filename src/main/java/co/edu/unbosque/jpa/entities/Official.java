@@ -16,7 +16,9 @@ import java.io.Serializable;
 @Table(name = "Official")
 @PrimaryKeyJoinColumn
 public class Official extends UserApp implements Serializable{
-
+    /**
+     *
+     */
     @Column(name = "name", nullable = false)
     private String name;
 
