@@ -1,0 +1,1990 @@
+{
+	"info": {
+		"_postman_id": "7c5c4d7d-82b0-46c3-9af1-fe9a49f56b66",
+		"name": "ProyectoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Official",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":123,\r\n    \"email\":\"admin@hotmail.com\",\r\n    \"name\":\"Admin\",\r\n    \"personId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/officials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"officials"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Official",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":123,\r\n    \"email\":\"admin@hotmail.com\",\r\n    \"name\":\"Admin\",\r\n    \"personId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/officials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"officials"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:44:27 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"admin\",\n    \"password\": \"123\",\n    \"email\": \"admin@hotmail.com\",\n    \"name\": \"Admin\",\n    \"personId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Comprobar la existencia de un Owner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/owners/OscarF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"owners",
+						"OscarF"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Comprobar la existencia de un Owner",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/owners/OscarF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"owners",
+								"OscarF"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:46:38 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"OscarF\",\n    \"password\": \"123456\",\n    \"email\": \"oscarF@gmail.com\",\n    \"role\": \"owner\",\n    \"personId\": 1,\n    \"name\": \"Oscar Florez\",\n    \"address\": \"12-27\",\n    \"neighborhood\": \"C. BOLIVAR\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Comprobar Existencia Official",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/officials/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"officials",
+						"admin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Comprobar Existencia Official",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/officials/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"officials",
+								"admin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:48:04 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"admin\",\n    \"password\": \"123\",\n    \"email\": \"admin@hotmail.com\",\n    \"role\": \"official\",\n    \"name\": \"Admin\",\n    \"personId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Comprobar Existencia Vet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/vets/pulgasFav",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"vets",
+						"pulgasFav"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Comprobar Existencia Vet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/vets/pulgasFav",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"vets",
+								"pulgasFav"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:48:42 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"pulgasFav\",\n    \"password\": \"123\",\n    \"email\": \"tuspulgas@gmail.com\",\n    \"role\": \"VET\",\n    \"name\": \"Veterinaria Pulgas\",\n    \"address\": \"12-27\",\n    \"neighborhood\": \"A. Nariño\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST Crear Owner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarf@gmail.com\",\r\n        \"password\":\"123\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13a-60\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/owners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"owners"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Crear Owner",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarf@gmail.com\",\r\n        \"password\":\"123\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13a-60\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/owners",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"owners"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:54:02 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"OscarF\",\n    \"password\": \"123\",\n    \"email\": \"oscarf@gmail.com\",\n    \"personId\": 1,\n    \"name\": \"Oscar Florez\",\n    \"address\": \"Cra4#13a-60\",\n    \"neighborhood\": \"C. BOLIVAR\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST Crear Vet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra16a#37\",\r\n        \"neighborhood\":\"BOSA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/vets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"vets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Crear Vet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra16a#37\",\r\n        \"neighborhood\":\"BOSA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/vets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Taller5-1.0-SNAPSHOT",
+								"api",
+								"vets"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "141"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 16:57:04 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"pulgasFav\",\n    \"password\": \"123\",\n    \"email\": \"pulgasF@gmail.com\",\n    \"name\": \"Veterinaria Pulgas\",\n    \"address\": \"Cra16a#37\",\n    \"neighborhood\": \"BOSA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST Crear Mascotas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"petId\": 1,\r\n    \"microchip\": \"\",\r\n    \"name\": \"Tabata\",\r\n    \"species\": \"Perro\",\r\n    \"race\": \"pastor aleman\",\r\n    \"size\": \"Pequeño\",\r\n    \"sex\": \"Hembra\",\r\n    \"picture\": \"pastorAleman.jpg\",\r\n    \"ownerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Crear Mascotas",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"petId\": 1,\r\n    \"microchip\": \"\",\r\n    \"name\": \"Tabata\",\r\n    \"species\": \"Perro\",\r\n    \"race\": \"pastor aleman\",\r\n    \"size\": \"Pequeño\",\r\n    \"sex\": \"Hembra\",\r\n    \"picture\": \"pastorAleman.jpg\",\r\n    \"ownerId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Taller5-1.0-SNAPSHOT",
+								"api",
+								"pets"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:01:43 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"petId\": 1,\n    \"microchip\": \"\",\n    \"name\": \"Tabata\",\n    \"species\": \"Perro\",\n    \"race\": \"pastor aleman\",\n    \"size\": \"Pequeño\",\n    \"sex\": \"Hembra\",\n    \"picture\": \"pastorAleman.jpg\",\n    \"ownerId\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Ver Mascotas y pintarlas en la Tabla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/petsList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"petsList"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Ver Mascotas y pintarlas en la Tabla",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/petsList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"petsList"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "160"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:02:36 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"pet_id\": 1,\n        \"microchip\": \"\",\n        \"name\": \"Tabata\",\n        \"species\": \"Perro\",\n        \"race\": \"pastor aleman\",\n        \"size\": \"Pequeño\",\n        \"sex\": \"Hembra\",\n        \"picture\": \"pastorAleman.jpg\",\n        \"ownerId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "PUT Actualizar Email Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"santiagoF@gmail.com\",\r\n        \"password\":\"123\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13a-60\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/passwords/owner/email/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"passwords",
+						"owner",
+						"email",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualiza Password Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"santiagoF@gmail.com\",\r\n        \"password\":\"12345\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13a-60\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/passwords/owner/email/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"passwords",
+						"owner",
+						"email",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Email y Password Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarsantiagoF@gmail.com\",\r\n        \"password\":\"123456@\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13a-60\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/passwords/owner/email/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"passwords",
+						"owner",
+						"email",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Address Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarsantiagoF@gmail.com\",\r\n        \"password\":\"123456@\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra11#4a-70\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/owners/owner/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"owners",
+						"owner",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Address y Neighbohood Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarsantiagoF@gmail.com\",\r\n        \"password\":\"123456@\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra4#13b-80\",\r\n        \"neighborhood\":\"BOSA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/passwords/owner/address/neighborhood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"passwords",
+						"owner",
+						"address",
+						"neighborhood"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Neighborhood Owner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"OscarF\",\r\n        \"email\":\"oscarsantiagoF@gmail.com\",\r\n        \"password\":\"123456@\",\r\n        \"personId\":1,\r\n        \"name\":\"Oscar Florez\",\r\n        \"address\":\"Cra11#4a-70\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/owners/owner/neighborhood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"owners",
+						"owner",
+						"neighborhood"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Img Mascota",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"petId\": 1,\r\n    \"microchip\": \"\",\r\n    \"name\": \"Tabata\",\r\n    \"species\": \"Perro\",\r\n    \"race\": \"pastor aleman\",\r\n    \"size\": \"Pequeño\",\r\n    \"sex\": \"Hembra\",\r\n    \"picture\": \"borderCollie.jpg\",\r\n    \"ownerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/pets/pet/picture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"pets",
+						"pet",
+						"picture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Guardar Caso Mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"caseId\":1,\r\n    \"createdAt\":\"hoy\",\r\n    \"type\":\"perdida\",\r\n    \"description\":\"se perdio en el parque\",\r\n    \"petId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/petcase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"petcase"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Guardar Caso Mascota",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"caseId\":1,\r\n    \"createdAt\":\"hoy\",\r\n    \"type\":\"perdida\",\r\n    \"description\":\"se perdio en el parque\",\r\n    \"petId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/petcase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"petcase"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:24:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"caseId\": null,\n    \"createdAt\": \"hoy\",\n    \"type\": \"perdida\",\n    \"description\": \"se perdio en el parque\",\n    \"petId\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "GET de las Visitas a la Veterinaria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"visitsList"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET de las Visitas a la Veterinaria",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"visitsList"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:27:53 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "POST Crear Visitas a la Veterinaria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"visitId\":\"1\",\r\n    \"createdAt\":\"ayer\",\r\n    \"type\":\"robo\",\r\n    \"description\":\"se lo llevaron mientras caminaba en el parque\",\r\n    \"vetId\":\"pulgasFav\",\r\n    \"petId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"visits",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST Crear Visitas a la Veterinaria",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitId\":\"1\",\r\n    \"createdAt\":\"ayer\",\r\n    \"type\":\"robo\",\r\n    \"description\":\"se lo llevaron mientras caminaba en el parque\",\r\n    \"vetId\":\"pulgasFav\",\r\n    \"petId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"visits",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "136"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:29:38 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"visitId\": \"1\",\n    \"createdAt\": \"ayer\",\n    \"type\": \"robo\",\n    \"description\": \"se lo llevaron mientras caminaba en el parque\",\n    \"vetId\": null,\n    \"petId\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT Visita tipo Microchip",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"visitId\":\"2\",\r\n    \"createdAt\":\"ayer\",\r\n    \"type\":\"microchip\",\r\n    \"description\":\"Se implanto Microchip\",\r\n    \"vetId\":\"pulgasFav\",\r\n    \"petId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visits/visit/microchip/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"visits",
+						"visit",
+						"microchip",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ver todas las visitas y no permitir mas de una vez la esterilizacion en la misma mascota",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"visitsList"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ver todas las visitas y no permitir mas de una vez la esterilizacion en la misma mascota",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"visitsList"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:36:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET de la visita segun el nombre de la mascota en la URI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList/visitNamePet/Tabata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"visitsList",
+						"visitNamePet",
+						"Tabata"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET de la visita segun el nombre de la mascota en la URI",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/visitsList/visitNamePet/Tabata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"visitsList",
+								"visitNamePet",
+								"Tabata"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:35:28 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Vet segun username en la URI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/vets/pulgasFav",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"vets",
+						"pulgasFav"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Vet segun username en la URI Para ediatar sus valores",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/vets/pulgasFav",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"vets",
+								"pulgasFav"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:37:22 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"pulgasFav\",\n    \"password\": \"123\",\n    \"email\": \"pulgasF@gmail.com\",\n    \"role\": \"VET\",\n    \"name\": \"Veterinaria Pulgas\",\n    \"address\": \"Cra16a#37\",\n    \"neighborhood\": \"BOSA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT Actualizar Address Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra26a#37\",\r\n        \"neighborhood\":\"BOSA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/vets/vet/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"vets",
+						"vet",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Neighborhood Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra26a#37\",\r\n        \"neighborhood\":\"C. BOLIVAR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Taller5-1.0-SNAPSHOT/api/vets/vet/neighborhood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Taller5-1.0-SNAPSHOT",
+						"api",
+						"vets",
+						"vet",
+						"neighborhood"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Address y Neighborhood Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra100#37\",\r\n        \"neighborhood\":\"FONTIBON\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/updatesVetEP/vet/address/neighborhood",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"updatesVetEP",
+						"vet",
+						"address",
+						"neighborhood"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Email Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123\",\r\n        \"email\":\"vetpulgasFav@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra100#37\",\r\n        \"neighborhood\":\"FONTIBON\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/updatesVetEP/vet/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"updatesVetEP",
+						"vet",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Password Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123456\",\r\n        \"email\":\"pulgasF@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra100#37\",\r\n        \"neighborhood\":\"FONTIBON\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/updatesVetEP/vet/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"updatesVetEP",
+						"vet",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Actualizar Password y Email Vet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\":\"pulgasFav\",\r\n        \"password\":\"123456@\",\r\n        \"email\":\"pulguitasFav@gmail.com\",\r\n        \"name\":\"Veterinaria Pulgas\",\r\n        \"address\":\"Cra100#37\",\r\n        \"neighborhood\":\"FONTIBON\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/passwords/vet/email/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"passwords",
+						"vet",
+						"email",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET owner para en Official FIltrar por localidad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/ownerLocalidad/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"ownerLocalidad",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET owner para en Official FIltrar por localidad",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/ownerLocalidad/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"ownerLocalidad",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:49:26 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"username\": \"OscarF\",\n        \"password\": \"123456@\",\n        \"email\": \"oscarsantiagoF@gmail.com\",\n        \"personId\": 1,\n        \"name\": \"Oscar Florez\",\n        \"address\": \"Cra11#4a-70\",\n        \"neighborhood\": \"C. BOLIVAR\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Todas las Mascotas para en Official filtrar por especie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/petSpecies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"petSpecies",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Todas las Mascotas para filtrar por especie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/petSpecies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"petSpecies",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:50:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"pet_id\": 1,\n        \"microchip\": \"1234\",\n        \"name\": \"Tabata\",\n        \"species\": \"Perro\",\n        \"race\": \"pastor aleman\",\n        \"size\": \"Pequeño\",\n        \"sex\": \"Hembra\",\n        \"picture\": \"borderCollie.jpg\",\n        \"ownerId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Pets para en Official filtrar por microchip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/statusMicrochip/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"statusMicrochip",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Pets para filtrar por microchip",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/statusMicrochip/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"statusMicrochip",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:51:01 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"pet_id\": 1,\n        \"microchip\": \"1234\",\n        \"name\": \"Tabata\",\n        \"species\": \"Perro\",\n        \"race\": \"pastor aleman\",\n        \"size\": \"Pequeño\",\n        \"sex\": \"Hembra\",\n        \"picture\": \"borderCollie.jpg\",\n        \"ownerId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET todas las visitas para en Official filtrar por esterilizacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/sterilization/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"sterilization",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET todas las visitas para filtrar por esterilizacion",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/sterilization/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"sterilization",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:51:46 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET PetCase para en Official filtrar por tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/caseType/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"caseType",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PetCase para filtrar por tipo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/caseType/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"caseType",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "98"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:52:43 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"caseId\": 1,\n        \"createdAt\": \"hoy\",\n        \"type\": \"perdida\",\n        \"description\": \"se perdio en el parque\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Vets para en Official buscar por el nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/vetName/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"vetName",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Vets para en Official buscar por el nombre",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/vetName/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"vetName",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:53:33 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Vists para en Official filtrar por tipo visita",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/visitType/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Proyecto-1.0-SNAPSHOT",
+						"api",
+						"filtersOfficial",
+						"visitType",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Vists para en Official filtrar por tipo visita",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto-1.0-SNAPSHOT/api/filtersOfficial/visitType/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto-1.0-SNAPSHOT",
+								"api",
+								"filtersOfficial",
+								"visitType",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "142"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Dec 2021 17:54:53 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"visitId\": \"1\",\n        \"createdAt\": \"ayer\",\n        \"type\": \"robo\",\n        \"description\": \"se lo llevaron mientras caminaba en el parque\",\n        \"vetId\": \"pulgasFav\",\n        \"petId\": 1\n    }\n]"
+				}
+			]
+		}
+	]
+}
