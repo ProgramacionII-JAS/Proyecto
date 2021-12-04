@@ -10,9 +10,18 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
+
 @Path("/owners/{username}")
 public class GetOwnerByUserName {
 
+    /**
+     * get method for Owner found by username
+     * @param username
+     * @return Json of owner
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("username") String username){

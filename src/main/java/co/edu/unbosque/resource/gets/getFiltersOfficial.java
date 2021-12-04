@@ -9,9 +9,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/filtersOfficial")
 public class getFiltersOfficial {
 
+    /**
+     * ownersNeighborhood get method and creation of the ownersNeighborhood path
+     * @param localidad
+     * @return Json of ownersNeighborhood
+     */
     @GET
     @Path("/ownerLocalidad")
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,6 +32,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * Species get method and creation of the Species path
+     * @return Json of the species
+     */
     @GET
     @Path("/petSpecies")
     @Produces(MediaType.APPLICATION_JSON)
@@ -36,6 +48,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * microchip get method and creation of the microchip path
+     * @return Json of the microchip
+     */
     @GET
     @Path("/statusMicrochip")
     @Produces(MediaType.APPLICATION_JSON)
@@ -48,6 +64,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * sterilization get method and creation of the sterilization path
+     * @return Json of the sterilization
+     */
     @GET
     @Path("/sterilization")
     @Produces(MediaType.APPLICATION_JSON)
@@ -60,6 +80,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * caseType get method and creation of the caseType path
+     * @return Json of the types
+     */
     @GET
     @Path("/caseType")
     @Produces(MediaType.APPLICATION_JSON)
@@ -72,6 +96,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * vetName get method and creation of the vetName path
+     * @return Json of the vetName
+     */
     @GET
     @Path("/vetName")
     @Produces(MediaType.APPLICATION_JSON)
@@ -84,6 +112,10 @@ public class getFiltersOfficial {
         }
     }
 
+    /**
+     * visitType get method and creation of the visitType path
+     * @return Json of the visit type.
+     */
     @GET
     @Path("/visitType")
     @Produces(MediaType.APPLICATION_JSON)

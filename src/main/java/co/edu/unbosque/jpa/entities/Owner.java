@@ -7,7 +7,7 @@ import java.util.List;
 
 
 /**
- * Owner representa las entities, las relaciones que tendrá la tabla owner, con las demás.
+ * Owner extends from userApp and represents the entities, the relationships that the Owner table will have, with the others.
  * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
  *
  */
@@ -17,25 +17,40 @@ import java.util.List;
 @PrimaryKeyJoinColumn
 public class Owner extends UserApp implements Serializable {
 
+    /**
+     * Person_id column of the owner table
+     */
     @Column(name = "person_id")
     private Integer personId;
 
+    /**
+     * Name column of the owner table
+     */
     @Column(name = "name")
     private String name;
 
+    /**
+     * Address column of the owner table
+     */
     @Column(name = "address")
     private String address;
 
+    /**
+     * Neighborhood column of the owner table
+     */
     @Column(name = "neighborhood")
     private String neighborhood;
 
+    /**
+     * One to many relationship referencing the ownerId
+     */
     @OneToMany(mappedBy = "ownerId",cascade = CascadeType.ALL)
     private List<Pet> pets = new ArrayList<>();
 
     public Owner() {}
 
     /**
-     * Crea un Owner recibiendo como parámetros, el username, el password, el email, el personId, el name, el address y el neighborhood.
+     * Create an Owner receiving as a parameter, the username and password, the email, the personId, the name, the address and the neighborhood.
      * @param username nombre de usuario
      * @param password contraseña de usuario
      * @param email correo de usuario
@@ -53,7 +68,7 @@ public class Owner extends UserApp implements Serializable {
     }
 
     /**
-     *
+     * Add a pet receiving a pet as a parameter
      * @param pet
      */
     public void addPet(Pet pet) {

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Pet representa las entities, las relaciones que tendrá la tabla Pet, con las demás.
+ * Pet extends from Owner and represents the entities, the relationships that the Pet table will have, with the others.
  * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
  *
  */
@@ -16,75 +16,75 @@ import java.util.List;
 public class Pet implements Serializable{
 
     /**
-     * Primary Key pet_id de la tabla Pet
+     * Primary key pet_id column of the pet table
      */
     @Id
     @Column(name = "pet_id")
     private Integer petId;
 
     /**
-     * Columna microchip
+     * Microchip column of the pet table
      */
     @Column(name = "microchip")
     private String microChip;
 
     /**
-     * Columna name
+     * Name column of the pet table
      */
     @Column(name = "name")
     private String name;
 
     /**
-     * Columna species
+     * Species column of the pet table
      */
     @Column(name = "species")
     private String species;
 
     /**
-     * Columna race
+     * Race column of the pet table
      */
     @Column(name = "race")
     private String race;
 
     /**
-     * Columna size
+     * Size column of the pet table
      */
     @Column(name = "size")
     private String size;
 
     /**
-     * Columna sex
+     * Sex column of the pet table
      */
     @Column(name = "sex")
     private String sex;
 
     /**
-     * Columna picture
+     * Picture column of the pet table
      */
     @Column(name = "picture")
     private String picture;
 
     /**
-     *
+     * Owner_id column of the pet table person_id reference
      */
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "person_id")
     private Owner ownerId;
 
     /**
-     *
+     * One to many relationship referencing the pet_id
      */
     @OneToMany(mappedBy = "pet_id",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private List<Visit> visit = new ArrayList<>();
 
     /**
-     *
+     * One to many relationship referencing the pet_id
      */
     @OneToMany(mappedBy = "pet_id", cascade = CascadeType.MERGE)
     private List<PetCase> petCase = new ArrayList<>();
 
     /**
-     * Crea un Pet recibiendo como parámetros, el petId, el microchip, el name, la specie, la raza, el size, el sex y la picture.
+     * Create a pet receiving as a parameter, the petIt, the microchip, the name, the species, the race, the size, the sex and the picture.
      * @param petId Id de la mascota
      * @param microChip microchip de la mascota
      * @param name nombre de la mascota
@@ -110,7 +110,7 @@ public class Pet implements Serializable{
     }
 
     /**
-     *
+     * Add a petCase receiving a petCase as a parameter
      * @param petcases
      */
     public void addPetCase(PetCase petcases) {
@@ -119,7 +119,7 @@ public class Pet implements Serializable{
     }
 
     /**
-     *
+     * Add a visit receiving a visits as a parameter
      * @param visits
      */
     public void addVisit(Visit visits) {

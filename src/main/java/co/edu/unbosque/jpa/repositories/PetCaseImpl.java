@@ -6,6 +6,9 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 public class PetCaseImpl implements PetCaseRepository{
 
     private EntityManager entityManager;
@@ -14,6 +17,11 @@ public class PetCaseImpl implements PetCaseRepository{
         this.entityManager = entityManager;
     }
 
+    /**
+     * Method to save case type
+     * @param pet
+     * @return type of case saved
+     */
     @Override
     public Optional<PetCase> saveType(PetCase pet) {
         try{
@@ -28,6 +36,10 @@ public class PetCaseImpl implements PetCaseRepository{
         return Optional.empty();
     }
 
+    /**
+     * Method to find all
+     * @return PetCase list
+     */
     @Override
     public List<PetCase> findAll() {
         return entityManager.createQuery("from PetCase ").getResultList();

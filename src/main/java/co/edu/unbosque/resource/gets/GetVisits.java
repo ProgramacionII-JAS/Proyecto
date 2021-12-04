@@ -10,9 +10,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/visitsList")
 public class GetVisits {
 
+    /**
+     * visits get method and creation of the visits path
+     * @return Json os visits
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getVisits(){
@@ -20,6 +27,11 @@ public class GetVisits {
         return Response.ok(persitedVisits.get()).build();
     }
 
+    /**
+     * VisitsByPetName get method and creation of the VisitsByPetName path
+     * @param petId
+     * @return Json of visits
+     */
     @GET
     @Path("{petId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -33,6 +45,11 @@ public class GetVisits {
         }
     }
 
+    /**
+     * Visit by PetId get method and creation of the Visit by PetId path
+     * @param namePet
+     * @return Json of visits
+     */
     @GET
     @Path("visitNamePet/{namePet}")
     @Produces(MediaType.APPLICATION_JSON)

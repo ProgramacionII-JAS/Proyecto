@@ -10,9 +10,16 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/petsList")
 public class GetPets {
 
+    /**
+     * method to get all
+     * @return Json of pet
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll(){
@@ -20,6 +27,11 @@ public class GetPets {
         return Response.ok(persistedPet.get()).build();
     }
 
+    /**
+     * petId method get and creation of the petId path
+     * @param petId
+     * @return Json of pet
+     */
     @GET
     @Path("{petId}")
     @Produces(MediaType.APPLICATION_JSON)

@@ -1,7 +1,9 @@
 package co.edu.unbosque.resource.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OwnerPOJO {
 

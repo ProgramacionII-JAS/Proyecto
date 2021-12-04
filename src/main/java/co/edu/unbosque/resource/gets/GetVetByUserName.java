@@ -10,9 +10,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/vets/{username}")
 public class GetVetByUserName {
 
+    /**
+     * vetByUserName method get and creation of the vetByUserName path
+     * @param username
+     * @return Json of vet
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("username") String username){

@@ -7,6 +7,9 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 public class VisitImpl implements VisitRepository{
 
     private EntityManager entityManager;
@@ -15,6 +18,11 @@ public class VisitImpl implements VisitRepository{
         this.entityManager = entityManager;
     }
 
+    /**
+     * method to save Visit
+     * @param visit
+     * @return Visit saved
+     */
     @Override
     public Optional<Visit> save(Visit visit) {
         try{
@@ -29,6 +37,10 @@ public class VisitImpl implements VisitRepository{
         return Optional.empty();
     }
 
+    /**
+     * method to find Visit
+     * @return Visit list
+     */
     @Override
     public List<Visit> findAll() {
         return entityManager.createQuery("from Visit ").getResultList();
@@ -41,6 +53,11 @@ public class VisitImpl implements VisitRepository{
         return pet != null ? Optional.of(pet) : Optional.empty();
     }
 
+    /**
+     * method to find Visit by petId
+     * @param namePet
+     * @return Visit list
+     */
     @Override
     public List<Visit> findVisitPetId(String namePet) {
         return entityManager.createQuery("SELECT vi FROM Visit vi WHERE vi.pet_id.name = :namePet", Visit.class)

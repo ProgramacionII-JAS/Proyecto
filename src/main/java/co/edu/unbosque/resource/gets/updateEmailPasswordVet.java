@@ -8,9 +8,18 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("updatesVetEP")
 public class updateEmailPasswordVet {
 
+    /**
+     * email or password put method for the vet path to modify
+     * @param update
+     * @param vetPOJO
+     * @return email or password sent by Json
+     */
     @PUT
     @Path("/vet/{update1}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -32,6 +41,13 @@ public class updateEmailPasswordVet {
         }
     }
 
+    /**
+     * address and neighborhood put method for the vet path to modify
+     * @param update
+     * @param update2
+     * @param vetPOJO
+     * @return address and neighborhood sent by Json
+     */
     @PUT
     @Path("/vet/{update}/{update2}")
     @Consumes(MediaType.APPLICATION_JSON)

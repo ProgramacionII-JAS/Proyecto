@@ -10,9 +10,18 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/passwords")
 public class putPasswords {
 
+    /**
+     * passwords put method for the owner path to modify
+     * @param newPassword
+     * @param ownerPOJO
+     * @return new password sent by Json
+     */
     @PUT
     @Path("/{owner}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -31,6 +40,13 @@ public class putPasswords {
         }
     }
 
+    /**
+     * email, password, address or neighborhood put method for the owner path to modify
+     * @param update1
+     * @param update2
+     * @param ownerPOJO
+     * @return email, password, address or neighborhood sent by Json
+     */
     @PUT
     @Path("/owner/{update1}/{update2}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -52,6 +68,13 @@ public class putPasswords {
         }
     }
 
+    /**
+     * email and password put method for the vet path to modify
+     * @param update1
+     * @param update2
+     * @param vetPOJO
+     * @return email and password sent by Json
+     */
     @PUT
     @Path("/vet/{update1}/{update2}")
     @Consumes(MediaType.APPLICATION_JSON)
