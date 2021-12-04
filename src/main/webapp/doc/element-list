@@ -1,0 +1,9 @@
+co.edu.unbosque.jpa.entities
+co.edu.unbosque.jpa.repositories
+co.edu.unbosque.resource
+co.edu.unbosque.resource.gets
+co.edu.unbosque.resource.pojo
+co.edu.unbosque.services
+co.edu.unbosque.servlet
+co.edu.unbosque.webSocketsChat
+co.edu.unbosque.webSocketsChat.model
