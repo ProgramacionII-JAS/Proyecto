@@ -1,5 +1,8 @@
 package co.edu.unbosque.webSocketsChat.model;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 public class Message {
 
     private String from;

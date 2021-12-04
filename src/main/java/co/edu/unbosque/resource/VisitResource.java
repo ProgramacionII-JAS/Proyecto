@@ -10,9 +10,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/visits")
 public class VisitResource {
 
+    /**
+     * create a Visit with the /visits path and post method
+     * @param visitPOJO
+     * @return visit created
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -31,8 +39,14 @@ public class VisitResource {
         }
     }
 
-
-
+    /**
+     * put method to update visit
+     * @param pet
+     * @param update
+     * @param newMicro
+     * @param petPOJO
+     * @return visit modified
+     */
     @PUT
     @Path("/{visit}/{microchip}/{newMicro}")
     @Consumes(MediaType.APPLICATION_JSON)

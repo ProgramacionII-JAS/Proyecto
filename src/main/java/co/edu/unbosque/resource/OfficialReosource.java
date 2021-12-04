@@ -8,9 +8,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/officials")
 public class OfficialReosource {
 
+    /**
+     *  create an official with the /officials path and post method
+     * @param official
+     * @return official created
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,12 +32,19 @@ public class OfficialReosource {
                     .build();
         } else {
             return Response.serverError()
-                    .entity("Yilber")
+                    .entity("error")
                     .build();
         }
 
     }
 
+    /**
+     * put method to update official
+     * @param official
+     * @param update
+     * @param officialPOJO
+     * @return official modified
+     */
     @PUT
     @Path("/{official}/{update}")
     @Consumes(MediaType.APPLICATION_JSON)

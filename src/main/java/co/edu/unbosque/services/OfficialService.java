@@ -13,11 +13,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * services of official
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Stateless
 public class OfficialService {
 
     OfficialRepository officialRepository;
 
+    /**
+     * Create an Official receiving as a parameter the officialPOJO.
+     * @param officialPOJO
+     * @return official created
+     */
     public Optional<OfficialPOJO> createOfficial(OfficialPOJO officialPOJO){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -39,6 +48,11 @@ public class OfficialService {
         }
     }
 
+    /**
+     * method to find Official by username
+     * @param username
+     * @return official list
+     */
     public Official findUsername(String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -52,6 +66,10 @@ public class OfficialService {
         return persistedOwner;
     }
 
+    /**
+     * method to find owner by localidad
+     * @return owner list
+     */
     public List<OwnerPOJO> findOwnerLocalidad(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -76,6 +94,10 @@ public class OfficialService {
         return ownerPOJOS;
     }
 
+    /**
+     * method to find pet by species
+     * @return pet list
+     */
     public List<PetPOJO> findBySpecie(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -96,6 +118,10 @@ public class OfficialService {
         return petPOJOS;
     }
 
+    /**
+     * method to find pet by microchip
+     * @return pet list
+     */
     public List<PetPOJO> findPetByStatusMicrochip(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -116,6 +142,10 @@ public class OfficialService {
         return petPOJOS;
     }
 
+    /**
+     * method to find visit by statusSterilization(
+     * @return visit list
+     */
     public List<VisitPOJO> findPetByStatusSterilization(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -136,6 +166,10 @@ public class OfficialService {
         return visitPOJOS;
     }
 
+    /**
+     * method to find petCase by type
+     * @return petCase list
+     */
     public List<PetCasePOJO> findCaseByType(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -154,6 +188,10 @@ public class OfficialService {
         return petCasePOJOS;
     }
 
+    /**
+     * method to find visit by name
+     * @return visit list
+     */
     public List<VisitPOJO> findByVetName(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -174,6 +212,10 @@ public class OfficialService {
         return visitPOJOS;
     }
 
+    /**
+     * method to find visit by type
+     * @return visit list
+     */
     public List<VisitPOJO> findVisitByType(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -194,6 +236,12 @@ public class OfficialService {
         return visitPOJOS;
     }
 
+    /**
+     * method to modify the name from the official
+     * @param newName
+     * @param username
+     * @return name modified
+     */
     public OfficialPOJO updateName(String newName, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -213,6 +261,12 @@ public class OfficialService {
         return officialPOJO;
     }
 
+    /**
+     * method to modify the email from the official
+     * @param newEmail
+     * @param username
+     * @return email modified
+     */
     public OfficialPOJO updateEmail(String newEmail, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

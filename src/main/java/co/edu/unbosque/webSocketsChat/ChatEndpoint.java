@@ -16,6 +16,9 @@ import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @ServerEndpoint(value = "/chat/{username}", decoders = co.edu.unbosque.webSocketsChat.MessageDecoder.class, encoders = co.edu.unbosque.webSocketsChat.MessageEncoder.class)
 public class ChatEndpoint {
 

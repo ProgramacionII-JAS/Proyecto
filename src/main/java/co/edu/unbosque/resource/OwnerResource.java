@@ -8,9 +8,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/owners")
 public class OwnerResource {
 
+    /**
+     * create an owner with the /owners path and post method
+     * @param owner
+     * @return owner created
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -29,6 +37,13 @@ public class OwnerResource {
         }
     }
 
+    /**
+     * put method to update owner
+     * @param owner
+     * @param update
+     * @param ownerPOJO
+     * @return owner modified
+     */
     @PUT
     @Path("/{owner}/{update}")
     @Consumes(MediaType.APPLICATION_JSON)

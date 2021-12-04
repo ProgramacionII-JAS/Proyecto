@@ -11,6 +11,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @WebServlet(name = "img-servlet", value = "/img-servlet")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024,
         maxFileSize = 1024 * 1024 * 5,
@@ -20,6 +23,13 @@ public class guardarImg extends HttpServlet {
     private final String UPLOAD_DIRECTORY = "imgsPets";
     private String fileName = "";
 
+    /**
+     * post method to save image
+     * @param request
+     * @param response
+     * @throws IOException
+     * @throws ServletException
+     */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
 

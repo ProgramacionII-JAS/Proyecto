@@ -7,7 +7,9 @@ import javax.websocket.EndpointConfig;
 import co.edu.unbosque.webSocketsChat.model.Message;
 import com.google.gson.Gson;
 
-
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 public class MessageEncoder implements Encoder.Text<Message> {
 
     private static Gson gson = new Gson();

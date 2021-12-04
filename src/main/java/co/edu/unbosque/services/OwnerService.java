@@ -16,11 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Stateless
 public class OwnerService {
 
     OwnerRepository ownerRepository;
 
+    /**
+     *
+     * @param ownerPOJO
+     * @return
+     */
     public Optional<OwnerPOJO> createOwner(OwnerPOJO ownerPOJO){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -46,6 +54,11 @@ public class OwnerService {
         }
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     */
     public Owner findUsername(String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -59,6 +72,12 @@ public class OwnerService {
         return persistedOwner;
     }
 
+    /**
+     *
+     * @param newName
+     * @param username
+     * @return
+     */
     public OwnerPOJO updateName(String newName, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -81,6 +100,12 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     *
+     * @param newEmail
+     * @param username
+     * @return
+     */
     public OwnerPOJO updateEmail(String newEmail, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -103,6 +128,12 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     *
+     * @param newAddress
+     * @param username
+     * @return
+     */
     public OwnerPOJO updateAddress(String newAddress, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -124,6 +155,12 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     *
+     * @param newNeighbohood
+     * @param username
+     * @return
+     */
     public OwnerPOJO updateNeighborhood(String newNeighbohood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -145,6 +182,12 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     *
+     * @param newPassword
+     * @param userName
+     * @return
+     */
     public OwnerPOJO updatePassword(String newPassword, String userName){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -166,6 +209,13 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     *
+     * @param newEmail
+     * @param newPassword
+     * @param userName
+     * @return
+     */
     public OwnerPOJO updateEmailPassword(String newEmail, String newPassword, String userName){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -187,6 +237,13 @@ public class OwnerService {
         return ownerPOJO;
     }
 
+    /**
+     * 
+     * @param address
+     * @param neighborhood
+     * @param username
+     * @return
+     */
     public OwnerPOJO updateAddressNeighnorhood(String address, String neighborhood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

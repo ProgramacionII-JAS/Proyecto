@@ -8,9 +8,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/vets")
 public class VetResource {
 
+    /**
+     * create a Vet with the /vets path and post method
+     * @param vet
+     * @return vet created
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -30,6 +38,13 @@ public class VetResource {
 
     }
 
+    /**
+     * put method to update vet
+     * @param vet
+     * @param update
+     * @param vetPOJO
+     * @return vet modified
+     */
     @PUT
     @Path("/{vet}/{update}")
     @Consumes(MediaType.APPLICATION_JSON)

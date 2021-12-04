@@ -8,9 +8,17 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
+/**
+ * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
+ */
 @Path("/pets")
 public class PetResource {
 
+    /**
+     * create a Pet with the /pets path and post method
+     * @param petPOJO
+     * @return pet created
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -28,6 +36,13 @@ public class PetResource {
         }
     }
 
+    /**
+     * put method to update pet
+     * @param pet
+     * @param update
+     * @param petPOJO
+     * @return pet modified
+     */
     @PUT
     @Path("/{pet}/{update}")
     @Consumes(MediaType.APPLICATION_JSON)

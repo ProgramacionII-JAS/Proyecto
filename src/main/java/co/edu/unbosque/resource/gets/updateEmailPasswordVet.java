@@ -8,9 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Optional;
 
-/**
- * @author Oscar Santiago Florez, Yilber Andrey Rojas, Ana Lucero Perez y Juan Sebastian vargas
- */
+C
 @Path("updatesVetEP")
 public class updateEmailPasswordVet {
 
