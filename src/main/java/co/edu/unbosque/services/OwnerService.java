@@ -25,9 +25,9 @@ public class OwnerService {
     OwnerRepository ownerRepository;
 
     /**
-     *
+     * Create an Owner receiving as a parameter the ownerPOJO.
      * @param ownerPOJO
-     * @return
+     * @return owner created
      */
     public Optional<OwnerPOJO> createOwner(OwnerPOJO ownerPOJO){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -55,9 +55,9 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to find owner by username
      * @param username
-     * @return
+     * @return owner list
      */
     public Owner findUsername(String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -73,10 +73,10 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the name from the owner
      * @param newName
      * @param username
-     * @return
+     * @return name modified
      */
     public OwnerPOJO updateName(String newName, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -101,10 +101,10 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the email from the owner
      * @param newEmail
      * @param username
-     * @return
+     * @return email modified
      */
     public OwnerPOJO updateEmail(String newEmail, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -129,10 +129,10 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the address from the owner
      * @param newAddress
      * @param username
-     * @return
+     * @return address modified
      */
     public OwnerPOJO updateAddress(String newAddress, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -156,10 +156,10 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the neighborhood from the owner
      * @param newNeighbohood
      * @param username
-     * @return
+     * @return neighborhood modified
      */
     public OwnerPOJO updateNeighborhood(String newNeighbohood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -183,10 +183,10 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the password from the owner
      * @param newPassword
      * @param userName
-     * @return
+     * @return password modified
      */
     public OwnerPOJO updatePassword(String newPassword, String userName){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -210,11 +210,11 @@ public class OwnerService {
     }
 
     /**
-     *
+     * method to modify the address and email from the owner
      * @param newEmail
      * @param newPassword
      * @param userName
-     * @return
+     * @return address and email modified
      */
     public OwnerPOJO updateEmailPassword(String newEmail, String newPassword, String userName){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -238,11 +238,11 @@ public class OwnerService {
     }
 
     /**
-     * 
+     * method to modify the address and neighborhood from the owner
      * @param address
      * @param neighborhood
      * @param username
-     * @return
+     * @return address and neighborhood modified
      */
     public OwnerPOJO updateAddressNeighnorhood(String address, String neighborhood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");

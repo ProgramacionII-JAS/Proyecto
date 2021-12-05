@@ -24,6 +24,16 @@ public class VisitService {
     VetRepository userAppRepository;
     PetRepository petRepository;
 
+    /**
+     * save visit receiving as a parameter the visitId, the createdAt, the type, the description, the vetId and petId.
+     * @param visitId
+     * @param createdAt
+     * @param type
+     * @param description
+     * @param vetId
+     * @param petId
+     * @return visit saved
+     */
     public VisitPOJO createVisit(String visitId, String createdAt, String type, String description, String vetId, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -56,6 +66,11 @@ public class VisitService {
         return visitPOJO;
     }
 
+    /**
+     * method to find pet by petId
+     * @param petId
+     * @return pet list
+     */
     public Pet findPetId(Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -69,6 +84,11 @@ public class VisitService {
         return persistedPet;
     }
 
+    /**
+     * method to find visit by petId
+     * @param namePet
+     * @return visit list
+     */
     public List<VisitPOJO> findVisitPetId(String namePet){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -89,6 +109,10 @@ public class VisitService {
         return visitPOJOS;
     }
 
+    /**
+     * method to find visit
+     * @return visit list
+     */
     public List<VisitPOJO> findAll(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

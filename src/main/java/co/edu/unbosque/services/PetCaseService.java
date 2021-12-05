@@ -26,6 +26,15 @@ public class PetCaseService {
     PetCaseRepository petCaseRepository;
     PetRepository petRepository;
 
+    /**
+     * save petCase receiving as a parameter the caseId, the createdAt, the type, the description and the petId.
+     * @param caseId
+     * @param createdAt
+     * @param type
+     * @param description
+     * @param petId
+     * @return petCase saved
+     */
     public PetCasePOJO save(Integer caseId, String createdAt, String type, String description, Integer petId){
         if (!type.equals("perdida") || !type.equals("robo") || !type.equals("fallecimiento")){
             EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -52,6 +61,10 @@ public class PetCaseService {
         }
     }
 
+    /**
+     * method to find petCase
+     * @return petCase list
+     */
     public List<PetCasePOJO> findAll(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

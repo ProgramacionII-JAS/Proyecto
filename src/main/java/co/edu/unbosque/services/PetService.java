@@ -25,6 +25,19 @@ public class PetService {
     PetRepository petRepository;
     OwnerRepository ownerRepository;
 
+    /**
+     * save pet receiving as a parameter the petId, the microchip, the name, the species, the race, the size, the sex, the picture and ownerId.
+     * @param petId
+     * @param microchip
+     * @param name
+     * @param species
+     * @param race
+     * @param size
+     * @param sex
+     * @param picture
+     * @param ownerId
+     * @return pet created
+     */
     public PetPOJO createdPet(Integer petId, String microchip, String name, String species, String race, String size, String sex, String picture, Integer ownerId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -45,6 +58,10 @@ public class PetService {
 
     }
 
+    /**
+     * method to find pet
+     * @return pet list
+     */
     public List<PetPOJO> findAll(){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -66,6 +83,11 @@ public class PetService {
         return petPOJOS;
     }
 
+    /**
+     * method to find pet by petId
+     * @param petId
+     * @return pet list
+     */
     public Pet findPetId(Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -79,6 +101,12 @@ public class PetService {
         return persistedPet;
     }
 
+    /**
+     * method to modify the name from the pet
+     * @param newName
+     * @param petId
+     * @return name modified
+     */
     public PetPOJO updateName(String newName, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -97,6 +125,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the species from the pet
+     * @param newSpecies
+     * @param petId
+     * @return specie modified
+     */
     public PetPOJO updateSpecies(String newSpecies, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -115,6 +149,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the race from the pet
+     * @param newRace
+     * @param petId
+     * @return race modified
+     */
     public PetPOJO updateRace(String newRace, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -133,6 +173,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the size from the pet
+     * @param newSize
+     * @param petId
+     * @return size modified
+     */
     public PetPOJO updateSize(String newSize, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -151,6 +197,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the sex from the pet
+     * @param newSex
+     * @param petId
+     * @return sex modified
+     */
     public PetPOJO updateSex(String newSex, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -169,6 +221,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the picture from the pet
+     * @param newPicture
+     * @param petId
+     * @return picture modified
+     */
     public PetPOJO updatePicture(String newPicture, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -188,6 +246,12 @@ public class PetService {
         return petPOJO;
     }
 
+    /**
+     * method to modify the microchip from the pet
+     * @param newMicrochip
+     * @param petId
+     * @return microchip modified
+     */
     public PetPOJO updateMicrochip(String newMicrochip, Integer petId){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

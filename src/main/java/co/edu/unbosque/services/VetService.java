@@ -19,6 +19,11 @@ public class VetService {
 
     VetRepository vetRepository;
 
+    /**
+     * save vet receiving as a parameter the vetPOJO
+     * @param vetPOJO
+     * @return vet created
+     */
     public Optional<VetPOJO> createVet(VetPOJO vetPOJO) {
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
@@ -43,6 +48,11 @@ public class VetService {
         }
     }
 
+    /**
+     * method to find vet by username
+     * @param username
+     * @return vet list
+     */
     public Vet findUsername(String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -56,6 +66,12 @@ public class VetService {
         return persistedVet;
     }
 
+    /**
+     * method to modify the name from the vet
+     * @param newName
+     * @param username
+     * @return name modified
+     */
     public VetPOJO updateName(String newName, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -77,6 +93,12 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the address from the vet
+     * @param newAddress
+     * @param username
+     * @return address modified
+     */
     public VetPOJO updateAddress(String newAddress, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -98,6 +120,12 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the neighborhood from the vet
+     * @param newNeigborhood
+     * @param username
+     * @return neighborhood modified
+     */
     public VetPOJO updateNeighborhood(String newNeigborhood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -119,6 +147,13 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the address and neighborhood from the vet
+     * @param address
+     * @param neighborhood
+     * @param username
+     * @return address and neighborhood modified
+     */
     public VetPOJO updateAddressAndNeighborhood(String address, String neighborhood, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -140,6 +175,12 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the email from the vet
+     * @param email
+     * @param username
+     * @return email modified
+     */
     public VetPOJO updateEmail(String email, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -161,6 +202,12 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the password from the vet
+     * @param password
+     * @param username
+     * @return password modified
+     */
     public VetPOJO updatePassword(String password, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -182,6 +229,13 @@ public class VetService {
         return vetPOJO;
     }
 
+    /**
+     * method to modify the email and password from the vet
+     * @param password
+     * @param email
+     * @param username
+     * @return email and password modified
+     */
     public VetPOJO updateEmailAndPassword(String password, String email, String username){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("proyecto");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
